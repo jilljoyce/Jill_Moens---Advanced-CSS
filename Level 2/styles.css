@@ -1,0 +1,75 @@
+body {
+  background-color: #c3cfe2;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container__unit {
+  position: relative;
+}
+
+.container__unit:hover .image {
+  opacity: 0;
+}
+
+.container__unit:hover .middle {
+  opacity: 1;
+  background-color: #3c3c50;
+}
+
+.image {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.middle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+}
+
+.middle button {
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
